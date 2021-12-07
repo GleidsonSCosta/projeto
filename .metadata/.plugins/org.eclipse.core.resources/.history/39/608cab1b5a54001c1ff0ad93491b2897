@@ -1,0 +1,46 @@
+package com.projeto.viagem;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+import com.projeto.viagem.entity.Cliente;
+import com.projeto.viagem.entity.Estado;
+import com.projeto.viagem.repository.ClienteRepository;
+import com.projeto.viagem.repository.EstadoRepository;
+
+@SpringBootApplication
+public class ProjetoPortoApplication {
+	
+//	@Bean
+//	public CommandLineRunner run(@Autowired ClienteRepository repository) {
+//		return args -> {
+//			Cliente cliente = new Cliente();
+//			cliente.setNome("Manuel");
+//			cliente.setCpf("0000000000");
+//			cliente.setEmail("manuel@gmail.com");
+//			cliente.setEndereco("Rua Bela Vista");
+//			cliente.setTelefone("99999999");
+//			
+//			repository.save(cliente);
+//		};
+//	}
+	@Bean
+	public CommandLineRunner incluirEstado(@Autowired EstadoRepository repository) {
+		return args -> {
+			Estado estado = new Estado();
+			estado.setNomeEstado("São Paulo");
+
+			repository.save(estado);
+		};
+	}
+	
+	
+
+	public static void main(String[] args) {
+		SpringApplication.run(ProjetoPortoApplication.class, args);
+	}
+
+}

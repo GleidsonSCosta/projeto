@@ -1,0 +1,5 @@
+package com.projeto.viagem.controller.dto;
+
+public class ViagemDTO {
+
+}

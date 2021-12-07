@@ -1,0 +1,15 @@
+package com.projeto.aplication;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.projeto.model.entity.Cliente;
+
+@SpringBootApplication
+public class ProjetoPortoApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ProjetoPortoApplication.class, args);
+	}
+
+}

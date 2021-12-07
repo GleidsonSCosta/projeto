@@ -1,0 +1,11 @@
+package com.projeto.viagem.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.projeto.viagem.entity.Viagem;
+
+public interface ViagemRepository extends JpaRepository<Viagem, Integer> {
+
+
+}
