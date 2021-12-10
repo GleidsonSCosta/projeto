@@ -38,8 +38,9 @@ public class Cliente {
 	
 	@Column(nullable = false)
 	private String endereco;
-	
-//	@OneToMany(mappedBy = "cliente")
-//	private List<Viagem> viagens;
+	 
+	//@JsonIgnore
+	//@OneToMany(mappedBy = "cliente")
+	//private List<Viagem> viagens;
 	
 }
