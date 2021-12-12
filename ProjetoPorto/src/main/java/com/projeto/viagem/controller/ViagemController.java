@@ -80,5 +80,12 @@ public class ViagemController {
 	public List<Viagem> buscarTodasViagens(){
 		return viagemRepository.findAll();
 	}
+	
+	// RETORNA LISTA DE VIAGENS DO CLIENTE POR ID
+	
+	@GetMapping("/cliente/{cliente}")
+	public List<Viagem>buscaViagensCliente(@PathVariable Cliente cliente){
+		return viagemRepository.findByCliente(cliente);
+	}
 
 }
